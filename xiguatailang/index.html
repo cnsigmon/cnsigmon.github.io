@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西瓜太郎dj完整版-经典怀旧儿歌合集与音乐资源分享</title>
+    <meta name="description" content="本站提供西瓜太郎dj完整版相关经典儿歌资源整理，涵盖《西瓜太郎》系列歌曲的怀旧版本、重制版本及相关音乐资讯，为喜爱童年回忆的用户提供便捷的音频欣赏与资源参考。">
+    <meta name="keywords" content="西瓜太郎dj完整版,西瓜太郎歌曲,经典儿歌,怀旧音乐,西瓜太郎dj">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff9900;
+            --primary-hover: #e68a00;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f9f9f9;
+            --bg-card: #ffffff;
+            --spacing-unit: 1rem;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-size: 1rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: #d35400;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* 主体内容区 */
+        main {
+            padding-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* 资源卡片网格 */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* 播放器区域 */
+        .player-section {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .player-container {
+            text-align: center;
+        }
+
+        .audio-player {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            height: 60px;
+        }
+
+        /* 信息介绍区 */
+        .info-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .info-content h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .info-content p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            background-color: #fff3e0;
+            color: #e65100;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* FAQ 区域 */
+        .faq-item {
+            background: var(--bg-card);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background-color: #fafafa;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 200px;
+            border-top: 1px solid #eee;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .info-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>🎵</span> 怀旧音乐站
+            </a>
+            <nav class="nav-links">
+                <a href="#">首页</a>
+                <a href="#resources">资源下载</a>
+                <a href="#intro">作品介绍</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>西瓜太郎dj完整版</h1>
+            <p>重温童年经典，探索《西瓜太郎》系列歌曲的多种版本，包括怀旧原版与流行的DJ混音版本，带您回到无忧无虑的时光。</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- 播放器演示区 -->
+        <section class="player-section" id="resources">
+            <h2 class="section-title">在线试听</h2>
+            <div class="player-container">
+                <p style="margin-bottom: 20px; color: #666;">点击下方播放按钮试听经典片段：</p>
+                <audio controls class="audio-player">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频元素。
+                </audio>
+                <div style="margin-top: 20px;">
+                    <span style="font-size: 0.9rem; background: #fff3e0; padding: 5px 10px; border-radius: 4px;">推荐音质：MP3 320kbps</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 资源列表 -->
+        <section id="intro">
+            <h2 class="section-title">资源推荐</h2>
+            <div class="resource-grid">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/watermelon1/400/250" alt="西瓜太郎经典原版封面" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">西瓜太郎经典原版合集</h3>
+                        <p class="card-desc">收录了《西瓜太郎》系列最经典的儿歌原版，保留了80、90年代特有的磁带音质，是收藏和怀旧的首选。</p>
+                        <div class="card-meta">
+                            <span>大小: 45.2 MB</span>
+                            <a href="#" class="btn">下载</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/watermelon2/400/250" alt="西瓜太郎DJ混音版封面" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">西瓜太郎DJ重制版</h3>
+                        <p class="card-desc">结合现代电子音乐元素，对经典旋律进行编曲和混音，节奏感更强，适合派对或车载播放。</p>
+                        <div class="card-meta">
+                            <span>大小: 12.8 MB</span>
+                            <a href="#" class="btn">下载</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/watermelon3/400/250" alt="西瓜太郎卡拉OK版封面" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">西瓜太郎卡拉OK伴奏版</h3>
+                        <p class="card-desc">移除了原唱人声，保留了完整的背景音乐，方便用户进行K歌或二次创作使用。</p>
+                        <div class="card-meta">
+                            <span>大小: 38.5 MB</span>
+                            <a href="#" class="btn">下载</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/watermelon4/400/250" alt="西瓜太郎怀旧合集封面" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">童年回忆精选集</h3>
+                        <p class="card-desc">除了西瓜太郎，还精选了当时流行的其他卡通主题曲，打造完整的80后童年听觉记忆。</p>
+                        <div class="card-meta">
+                            <span>大小: 120 MB</span>
+                            <a href="#" class="btn">下载</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 信息介绍 -->
+        <section class="info-section">
+            <div class="info-content">
+                <h3>关于《西瓜太郎》音乐</h3>
+                <p>《西瓜太郎》是台湾著名的卡通形象，以其独特的西瓜头造型和幽默的故事情节深受观众喜爱。该角色的主题曲也成为了几代人的童年记忆。随着网络技术的发展，许多用户希望寻找“西瓜太郎dj完整版”等不同风格的改编版本，以适应现代的听觉习惯。</p>
+                <p>本站提供的资源均经过整理和筛选，旨在为用户提供合法、便捷的怀旧音乐体验。请注意，部分重制版本可能由民间爱好者制作，仅供欣赏交流。</p>
+                <div class="tag-cloud">
+                    <span class="tag">#经典儿歌</span>
+                    <span class="tag">#80后回忆</span>
+                    <span class="tag">#DJ混音</span>
+                    <span class="tag">#车载音乐</span>
+                </div>
+            </div>
+            <div class="info-content">
+                <h3>资源使用指南</h3>
+                <p>1. <strong>格式选择：</strong> 如果您主要用于手机听歌，建议下载MP3格式；如果用于电脑播放或刻录光盘，建议下载无损FLAC格式。</p>
+                <p>2. <strong>音质说明：</strong> “DJ完整版”通常指在原曲基础上添加了鼓点、贝斯等电子乐器的混音版本，音质可能经过压缩处理，请以实际试听效果为准。</p>
+                <p>3. <strong>版权提示：</strong> 本站资源仅供个人学习与欣赏，请勿用于商业用途。如涉及版权问题，请联系我们删除。</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2 class="section-title">常见问题</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">哪里可以找到高清的西瓜太郎dj完整版？</div>
+                <div class="faq-answer">
+                    <p>本站已为您整理了多版本的DJ混音资源，您可以在“资源推荐”板块查看详情并下载。部分版本可能来自网络社区的分享，请确保您的设备安装了杀毒软件。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">西瓜太郎的原版歌曲有哪些？</div>
+                <div class="faq-answer">
+                    <p>原版歌曲主要包括《西瓜太郎》、《我的名字叫西瓜太郎》以及相关的插曲等。这些歌曲风格明快，朗朗上口，非常适合儿童传唱。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">下载的文件无法播放怎么办？</div>
+                <div class="faq-answer">
+                    <p>请检查您的播放器是否支持该音频格式。如果是MP3格式但无法播放，建议尝试更换浏览器或使用VLC播放器等第三方软件打开。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">这些DJ版是官方发布的吗？</div>
+                <div class="faq-answer">
+                    <p>目前市面上流传的“西瓜太郎dj完整版”多为民间音乐爱好者或DJ根据原曲进行改编制作，并非官方正式发行的专辑，因此音质和编曲风格可能有所差异。</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 怀旧音乐站. All Rights Reserved.</p>
+            <p>本站所有资源均来自网络收集，仅供交流学习使用，如有侵权请联系站长删除。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的FAQ折叠交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
