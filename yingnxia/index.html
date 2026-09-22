@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="英女侠 - DC漫画超级英雄人物介绍，包括角色背景、代表作品、能力解析及电影改编。探索希沃特·艾尔·普林斯（史蒂夫·特蕾弗之子）作为亚马逊女战士的传奇故事。">
+    <meta name="keywords" content="英女侠, 海王之女, 希沃特·艾尔, DC漫画, 超级英雄, 动漫人物">
+    <title>英女侠 - DC漫画超级英雄角色与作品全解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a90e2 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 20%),
+                              radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 0%, transparent 25%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Character Profile Section */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .profile-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .profile-info {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .profile-info h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .profile-role {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .stat-item h4 {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-item p {
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        /* Works Section */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .work-image {
+            height: 200px;
+            background-color: #ddd;
+            position: relative;
+        }
+        
+        .work-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .work-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .work-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .work-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-content p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .work-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Abilities Section */
+        .abilities-container {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .ability-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .ability-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .ability-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(74, 144, 226, 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .ability-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .ability-content p {
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col a {
+            color: #bbb;
+            font-size: 0.95rem;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>DC</span> 英女侠
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#profile" class="active">角色档案</a></li>
+                    <li><a href="#works">代表作品</a></li>
+                    <li><a href="#abilities">能力解析</a></li>
+                    <li><a href="#news">最新资讯</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>英女侠</h1>
+                <p>从亚马逊战士到正义联盟核心成员，探索希沃特·艾尔·普林斯（Wonder Woman）的传奇故事。</p>
+                <a href="#profile" class="btn">深入了解角色</a>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="section">
+            <div class="container">
+                <h2 class="section-title">角色档案</h2>
+                <div class="profile-grid">
+                    <div class="profile-card">
+                        <img src="https://picsum.photos/seed/wonderwoman/400/600" alt="英女侠角色插画">
+                    </div>
+                    <div class="profile-info">
+                        <h2>希沃特·艾尔·普林斯</h2>
+                        <span class="profile-role">半神 · 亚马逊公主 · 正义联盟成员</span>
+                        
+                        <p>英女侠，本名希沃特·艾尔·普林斯，是漫画《全美漫画》第8期（1941年）中首次登场的超级英雄。她是天堂岛（Themyscira，也译作天堂岛）的公主，由众神之王宙斯与亚马逊女王希波吕忒所生。</p>
+                        <br>
+                        <p>作为拥有半神血统的女战士，她拥有超人的力量、速度、耐力和飞行能力，并精通各种武器，最著名的是她的“真言套索”。她致力于在人类世界与神界之间架起沟通的桥梁，维护和平与正义。</p>
+
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <h4>全名</h4>
+                                <p>希沃特·艾尔·普林斯</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>起源地</h4>
+                                <p>天堂岛</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>能力</h4>
+                                <p>半神之力</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>武器</h4>
+                                <p>真言套索、战神之锤</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works" class="section" style="background-color: #eef2f5;">
+            <div class="container">
+                <h2 class="section-title">代表作品</h2>
+                <div class="works-grid">
+                    <article class="work-card">
+                        <div class="work-image">
+                            <img src="https://picsum.photos/seed/comic1/300/200" alt="漫画封面">
+                            <span class="work-badge">漫画</span>
+                        </div>
+                        <div class="work-content">
+                            <h3>全美漫画 #8</h3>
+                            <p>1941年创刊作，英女侠与神奇女侠首次登场，确立了现代超级英雄漫画的基调。</p>
+                            <a href="#" class="work-link">阅读详情 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-image">
+                            <img src="https://picsum.photos/seed/film1/300/200" alt="电影海报">
+                            <span class="work-badge">电影</span>
+                        </div>
+                        <div class="work-content">
+                            <h3>正义联盟 (2017)</h3>
+                            <p>在DC扩展宇宙（DCEU）中，由盖尔·加朵饰演的英女侠作为核心成员拯救世界。</p>
+                            <a href="#" class="work-link">观看预告 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-image">
+                            <img src="https://picsum.photos/seed/cartoon1/300/200" alt="动画截图">
+                            <span class="work-badge">动画</span>
+                        </div>
+                        <div class="work-content">
+                            <h3>正义联盟动画版</h3>
+                            <p>在多个动画系列中，英女侠以其领导力和勇气，成为团队不可或缺的战力。</p>
+                            <a href="#" class="work-link">查看剧集 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Abilities Section -->
+        <section id="abilities" class="section">
+            <div class="container">
+                <h2 class="section-title">能力解析</h2>
+                <div class="abilities-container">
+                    <div class="ability-item">
+                        <div class="ability-icon">⚔️</div>
+                        <div class="ability-content">
+                            <h3>神力与体魄</h3>
+                            <p>作为宙斯之女，英女侠拥有超越常人的力量、耐力和速度。她的战斗技巧经过天堂岛千年的严格训练，精通格斗术、剑术和射术。</p>
+                        </div>
+                    </div>
+                    <div class="ability-item">
+                        <div class="ability-icon">🔗</div>
+                        <div class="ability-content">
+                            <h3>真言套索</h3>
+                            <p>这是英女侠最标志性的武器。这条由赫淮斯托斯锻造的套索具有神奇的魔力，被套住的人无法说谎，且套索本身坚韧无比，极难被破坏。</p>
+                        </div>
+                    </div>
+                    <div class="ability-item">
+                        <div class="ability-icon">✈️</div>
+                        <div class="ability-content">
+                            <h3>飞行能力</h3>
+                            <p>与部分早期版本不同，现代英女侠通常被描绘为能够通过脚下的神靴飞行，这使她在空中作战和快速移动时拥有巨大的优势。</p>
+                        </div>
+                    </div>
+                    <div class="ability-item">
+                        <div class="ability-icon">🛡️</div>
+                        <div class="ability-content">
+                            <h3>战术智慧</h3>
+                            <p>尽管拥有强大的武力，英女侠也是一位杰出的战略家和外交官。她经常担任正义联盟的智囊之一，在关键时刻提出关键策略。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="section" style="background-color: #eef2f5;">
+            <div class="container">
+                <h2 class="section-title">最新资讯</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <article style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem;">英女侠新漫画系列回归</h3>
+                            <p style="color: #666;">DC漫画宣布重启英女侠个人漫画系列，新任编剧将带来怎样的故事...</p>
+                        </div>
+                        <span style="font-size: 0.85rem; color: #999;">2023-10-15</span>
+                    </article>
+                    <article style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem;">DC宇宙第二阶段展望</h3>
+                            <p style="color: #666;">关于未来几年英女侠在电影和动画中的发展计划，官方已透露部分信息。</p>
+                        </div>
+                        <span style="font-size: 0.85rem; color: #999;">2023-09-28</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p style="color: #bbb; font-size: 0.9rem; line-height: 1.6;">
+                        本站致力于为DC漫画粉丝提供最全面、最准确的英女侠角色资料、作品介绍及能力解析。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#profile">角色档案</a></li>
+                        <li><a href="#works">代表作品</a></li>
+                        <li><a href="#abilities">能力解析</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">DC官方主页</a></li>
+                        <li><a href="#">正义联盟 Wiki</a></li>
+                        <li><a href="#">漫画发行商</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 英女侠资料站. All rights reserved. 内容仅供学习与交流使用.
+            </div>
+        </div>
+    </footer>
+
+</body>
+                          </html>
