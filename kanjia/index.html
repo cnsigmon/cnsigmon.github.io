@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="砍价网提供实用的砍价技巧、话术模板、砍价实战案例及砍价软件工具指南。帮助您在购物、租房、二手车交易中成功压价，节省每一分开支。">
+    <meta name="keywords" content="砍价,砍价技巧,砍价话术,砍价攻略,淘宝砍价,拼多多砍价,租房砍价,砍价软件">
+    <title>砍价-实用砍价技巧、话术与实战攻略指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b00;
+            --primary-hover: #e65100;
+            --secondary-color: #2c3e50;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--secondary-color);
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-cta {
+            background-color: var(--primary-color);
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--primary-hover);
+            color: white !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffffff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-sub);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(255, 107, 0, 0.15);
+            padding: 5px;
+            border: 1px solid #ffe0b2;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            outline: none;
+            border-radius: 30px;
+        }
+
+        .search-box button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: var(--card-bg);
+            padding: 30px 0;
+            margin-top: -30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-sub);
+            font-size: 14px;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        /* Left Column: Articles */
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .article-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .article-body {
+            padding: 20px;
+        }
+
+        .article-tag {
+            background-color: #fff3e0;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .article-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: var(--text-sub);
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Right Column: Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tips-list li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .tips-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .tips-list h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .tips-list p {
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        .category-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .category-item {
+            background-color: #f1f3f5;
+            padding: 10px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .category-item:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Tool Section */
+        .tool-section {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+
+        .tool-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .tool-text {
+            flex: 1;
+        }
+
+        .tool-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .tool-text p {
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .tool-box {
+            flex: 1;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .tool-box input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+        }
+
+        .tool-box button {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--primary-color);
+            font-weight: 400;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #fafafa;
+        }
+
+        .faq-answer p {
+            padding: 20px;
+            color: var(--text-sub);
+            font-size: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #999;
+            padding: 50px 0 20px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .tool-content {
+                flex-direction: column;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13c0-1.7 1.3-3 3-3s3 1.3 3 3"/><path d="M9 10v5"/><path d="M12 13c0-1.7 1.3-3 3-3s3 1.3 3 3"/><path d="M15 10v5"/><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+                <span>砍价</span>网
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-cta">砍价神器</a></li>
+                    <li><a href="#">砍价技巧</a></li>
+                    <li><a href="#">砍价话术</a></li>
+                    <li><a href="#">砍价案例</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>拒绝被宰，<span>砍价</span>攻略全收录</h1>
+                <p>从淘宝、拼多多到线下实体店，从租房买车到商务谈判，这里有最实用的砍价技巧、话术模板和成功案例，助您轻松省下50%以上预算。</p>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索您想砍的品类（如：苹果手机、二手车、房租）...">
+                    <button>立即搜索</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <div class="container">
+            <section class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">10w+</span>
+                    <span class="stat-label">累计节省金额</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">实战砍价案例</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">行业砍价指南</span>
+                </div>
+            </section>
+        </div>
+
+        <!-- Content Area -->
+        <div class="container content-grid">
+            <!-- Left Column: Articles -->
+            <div class="main-column">
+                <div class="section-title">
+                    <h2>最新砍价攻略</h2>
+                    <a href="#">查看全部 &rarr;</a>
+                </div>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/tech/800/400" alt="数码产品砍价" class="article-img">
+                    <div class="article-body">
+                        <span class="article-tag">数码家电</span>
+                        <h3 class="article-title">2024年数码产品线下砍价实战指南：从买手机到买电脑</h3>
+                        <p class="article-excerpt">实体店买电子产品真的比电商贵吗？本文通过三个真实案例，拆解导购的“套路”与“底价”，教你如何用电商比价截图作为武器，成功压价千元以上。</p>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/car/800/400" alt="二手车砍价" class="article-img">
+                    <div class="article-body">
+                        <span class="article-tag">二手车</span>
+                        <h3 class="article-title">二手车砍价避坑指南：如何识别车况“硬伤”与价格陷阱</h3>
+                        <p class="article-excerpt">看车、试驾、砍价，二手车交易流程繁琐且水深。本文为您整理了车辆检查的12个关键点，以及针对不同车况的砍价话术，确保您买到性价比最高的爱车。</p>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/rent/800/400" alt="租房砍价" class="article-img">
+                    <div class="article-body">
+                        <span class="article-tag">生活服务</span>
+                        <h3 class="article-title">租房砍价话术大全：房东为什么不愿意降价？如何破局？</h3>
+                        <p class="article-excerpt">面对高昂的房租，合理的砍价是必要的。本文分析了房东的心理防线，提供了长租短租、整租合租等不同场景下的沟通策略，助您以更低价格租到理想房源。</p>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">砍价小贴士</h3>
+                    <ul class="tips-list">
+                        <li>
+                            <h4>掌握时机</h4>
+                            <p>不要一进门就喊价，先观察商品陈列，等导购主动推销时再提出异议。</p>
+                        </li>
+                        <li>
+                            <h4>善用比价</h4>
+                            <p>手机里下载比价软件，随时准备出示低价截图，这是最有力的武器。</p>
+                        </li>
+                        <li>
+                            <h4>明确预算</h4>
+                            <p>砍价前先设定一个心理底线，避免为了省一点钱而陷入无休止的拉锯战。</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门分类</h3>
+                    <div class="category-list">
+                        <a href="#" class="category-item">淘宝砍价</a>
+                        <a href="#" class="category-item">拼多多砍价</a>
+                        <a href="#" class="category-item">超市购物</a>
+                        <a href="#" class="category-item">菜市场</a>
+                        <a href="#" class="category-item">买车砍价</a>
+                        <a href="#" class="category-item">砍价软件</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">本周热门话题</h3>
+                    <ul class="tips-list">
+                        <li><a href="#">海鲜市场砍价翻车实录</a></li>
+                        <li><a href="#">奢侈品包包砍价技巧</a></li>
+                        <li><a href="#">装修材料砍价全攻略</a></li>
+                        <li><a href="#">如何礼貌地拒绝砍价</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Tool Section -->
+        <section class="tool-section">
+            <div class="container tool-content">
+                <div class="tool-text">
+                    <h2>砍价计算器</h2>
+                    <p>输入原价和期望折扣，快速计算需要砍掉多少钱，以及砍价成功率预测。</p>
+                    <ul style="opacity: 0.9; margin-bottom: 20px;">
+                        <li style="margin-bottom: 10px;">✅ 支持多种砍价比例模型</li>
+                        <li style="margin-bottom: 10px;">✅ 历史砍价数据参考</li>
+                        <li>✅ 实时生成砍价话术建议</li>
+                    </ul>
+                </div>
+                <div class="tool-box">
+                    <input type="number" id="price" placeholder="请输入商品原价 (元)">
+                    <input type="number" id="discount" placeholder="期望折扣 (如：8折输入80)">
+                    <button onclick="calculate()">开始计算</button>
+                    <div id="result" style="margin-top: 15px; font-weight: bold; color: var(--primary-color);"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container faq-section">
+            <div class="section-title">
+                <h2>砍价常见问题 (FAQ)</h2>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">砍价会得罪老板吗？</div>
+                <div class="faq-answer">
+                    <p>不会。砍价是商业交易中非常正常的一部分。只要态度友好、不恶语相向，大多数商家都欢迎懂行且会砍价的顾客，因为这意味着成交概率更高。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">网上购物（淘宝/京东）可以砍价吗？</div>
+                <div class="faq-answer">
+                    <p>传统的线下砍价在电商平台上并不适用。但在电商大促期间，你可以通过“拍下改价”、“申请仅退款”或咨询客服申请优惠券、满减来达到变相砍价的目的。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">第一次砍价，总是不敢开口怎么办？</div>
+                <div class="faq-answer">
+                    <p>建议先从低价商品（如水果、小饰品）开始练习。准备一套标准话术，例如：“老板，能不能便宜点？我看网上比这便宜不少。”多练习几次就会自然了。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>关于砍价网</h3>
+                    <p>砍价网致力于为广大消费者提供最实用、最专业的砍价指南与技巧分享，让每一分钱都花得明明白白。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="#">砍价技巧</a></li>
+                        <li><a href="#">砍价话术</a></li>
+                        <li><a href="#">砍价案例</a></li>
+                        <li><a href="#">工具下载</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>热门领域</h3>
+                    <ul>
+                        <li><a href="#">数码家电</a></li>
+                        <li><a href="#">房产装修</a></li>
+                        <li><a href="#">汽车交易</a></li>
+                        <li><a href="#">日常消费</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li><a href="#">投稿合作</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">广告投放</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 砍价网 版权所有 | 本站内容仅供参考，请理性消费</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的砍价计算器逻辑
+        function calculate() {
+            var price = parseFloat(document.getElementById('price').value);
+            var discount = parseFloat(document.getElementById('discount').value);
+            var resultDiv = document.getElementById('result');
+
+            if (isNaN(price) || isNaN(discount)) {
+                resultDiv.textContent = "请输入有效的数字";
+                return;
+            }
+
+            var finalPrice = price * (discount / 100);
+            var saved = price - finalPrice;
+
+            resultDiv.innerHTML = `原价: ¥${price} <br> 折后价: ¥${finalPrice.toFixed(2)} <br> 成功砍价: ¥${saved.toFixed(2)}`;
+        }
+
+        // FAQ 折叠逻辑
+        var faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(function(item) {
+            item.querySelector('.faq-question').addEventListener('click', function() {
+                // 关闭其他
+                faqItems.forEach(function(otherItem) {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // 切换当前
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+  </html>
