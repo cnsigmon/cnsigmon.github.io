@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹射世界 - 玩家指南、抽卡机制与策略分析</title>
+    <meta name="description" content="本站为您提供《弹射世界》的全面游戏攻略、角色图鉴、抽卡概率分析与战斗策略。包含新手入门指南、核心玩法解析及最新活动资讯。">
+    <meta name="keywords" content="弹射世界, 弹射世界攻略, 弹射世界抽卡, 弹射世界角色, 弹射世界战斗策略">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --secondary-color: #ec4899;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --border-color: #e2e8f0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0e7ff 0%, #fbcfe8 100%);
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.8);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .section-link {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Character Grid */
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .char-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--border-color);
+        }
+
+        .char-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .char-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #f1f5f9;
+        }
+
+        .char-info {
+            padding: 1rem;
+        }
+
+        .char-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .char-rarity {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .char-type {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        /* Guide List */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .guide-item {
+            display: flex;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            align-items: center;
+            transition: border-color 0.2s;
+        }
+
+        .guide-item:hover {
+            border-color: var(--primary-color);
+        }
+
+        .guide-icon {
+            width: 48px;
+            height: 48px;
+            background-color: #e0e7ff;
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .guide-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .guide-content p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        /* Stats/Probability */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stat-box {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .stat-icon {
+            margin-right: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .stat-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .prob-bar {
+            height: 12px;
+            background-color: #f1f5f9;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+            display: flex;
+        }
+
+        .prob-segment {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .prob-ssr { background-color: var(--secondary-color); }
+        .prob-sr { background-color: #8b5cf6; }
+        .prob-r { background-color: #94a3b8; }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .guide-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .guide-icon {
+                margin-right: 0;
+                margin-bottom: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <span>⚡</span> 弹射世界
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#guide">新手指南</a></li>
+                <li><a href="#characters">角色图鉴</a></li>
+                <li><a href="#mechanics">抽卡机制</a></li>
+                <li><a href="#community">社区讨论</a></li>
+            </ul>
+        </nav>
+        <a href="#guide" class="cta-btn">开始探索</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1>掌握弹射世界的核心策略</h1>
+            <p>无论你是刚刚踏上旅途的召唤师，还是寻求极限通关的资深玩家，这里都有你需要的角色搭配、战斗机制分析与最新资讯。</p>
+            <div class="hero-tags">
+                <span class="tag">RPG</span>
+                <span class="tag">策略</span>
+                <span class="tag">回合制</span>
+                <span class="tag">二次元</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="guide" class="container">
+        <div class="section-header">
+            <h2 class="section-title">新手入门与核心玩法</h2>
+            <a href="#" class="section-link">查看完整攻略 &rarr;</a>
+        </div>
+        <div class="guide-list">
+            <article class="guide-item">
+                <div class="guide-icon">⚔️</div>
+                <div class="guide-content">
+                    <h3>战斗系统与闪避机制</h3>
+                    <p>理解“弹射”的核心在于精准的时机判定。掌握闪避无敌帧与技能连携，是通关高难副本的关键。</p>
+                </div>
+            </article>
+            <article class="guide-item">
+                <div class="guide-icon">🧬</div>
+                <div class="guide-content">
+                    <h3>属性克制与队伍构建</h3>
+                    <p>熟悉火、水、雷、光、暗五种属性之间的克制关系，以及如何根据敌人弱点构建最优队伍。</p>
+                </div>
+            </article>
+            <article class="guide-item">
+                <div class="guide-icon">💎</div>
+                <div class="guide-content">
+                    <h3>资源管理与召唤规划</h3>
+                    <p>如何合理分配召唤石与英雄之证，制定科学的抽卡计划，以最低成本获取心仪角色。</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="characters" class="container">
+        <div class="section-header">
+            <h2 class="section-title">热门角色推荐</h2>
+            <a href="#" class="section-link">查看全图鉴 &rarr;</a>
+        </div>
+        <div class="char-grid">
+            <div class="char-card">
+                <img src="https://picsum.photos/seed/erth/400/500" alt="角色示例" class="char-img">
+                <div class="char-info">
+                    <span class="char-rarity">★5</span>
+                    <h3 class="char-name">伊姆霍特普</h3>
+                    <span class="char-type">治疗 / 辅助</span>
+                </div>
+            </div>
+            <div class="char-card">
+                <img src="https://picsum.photos/seed/venus/400/500" alt="角色示例" class="char-img">
+                <div class="char-info">
+                    <span class="char-rarity">★5</span>
+                    <h3 class="char-name">维纳斯</h3>
+                    <span class="char-type">雷属性 / 输出</span>
+                </div>
+            </div>
+            <div class="char-card">
+                <img src="https://picsum.photos/seed/odin/400/500" alt="角色示例" class="char-img">
+                <div class="char-info">
+                    <span class="char-rarity">★5</span>
+                    <h3 class="char-name">奥丁</h3>
+                    <span class="char-type">光属性 / 控制</span>
+                </div>
+            </div>
+            <div class="char-card">
+                <img src="https://picsum.photos/seed/lilith/400/500" alt="角色示例" class="char-img">
+                <div class="char-info">
+                    <span class="char-rarity">★5</span>
+                    <h3 class="char-name">莉莉丝</h3>
+                    <span class="char-type">暗属性 / 爆发</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mechanics" class="container">
+        <div class="section-header">
+            <h2 class="section-title">抽卡概率与机制分析</h2>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-header">
+                    <span class="stat-icon">🎲</span>
+                    <span class="stat-title">SSR角色概率</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.5rem;">当池子包含角色时</p>
+                <div class="prob-bar">
+                    <div class="prob-segment prob-ssr" style="width: 2%">2%</div>
+                    <div class="prob-segment prob-sr" style="width: 8%">8%</div>
+                    <div class="prob-segment prob-r" style="width: 90%">90%</div>
+                </div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-header">
+                    <span class="stat-icon">🛡️</span>
+                    <span class="stat-title">SSR武器概率</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.5rem;">当池子包含武器时</p>
+                <div class="prob-bar">
+                    <div class="prob-segment prob-ssr" style="width: 2%">2%</div>
+                    <div class="prob-segment prob-sr" style="width: 8%">8%</div>
+                    <div class="prob-segment prob-r" style="width: 90%">90%</div>
+                </div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-header">
+                    <span class="stat-icon">⚖️</span>
+                    <span class="stat-title">保底机制</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.5rem;">每60发召唤必定获得1名SSR</p>
+                <div class="prob-bar">
+                    <div class="prob-segment prob-ssr" style="width: 100%">60发保底</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="section-header">
+            <h2 class="section-title">常见问题 (FAQ)</h2>
+        </div>
+        <div style="display: grid; gap: 1.5rem;">
+            <details style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                <summary style="font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    <span>如何获得初始角色？</span>
+                    <span>+</span>
+                </summary>
+                <p style="margin-top: 1rem; color: var(--text-sub); font-size: 0.95rem;">新玩家通常在游戏初期会通过主线剧情赠送SSR角色，或者参与新手活动获取。建议优先培养赠送的初始角色。</p>
+            </details>
+            <details style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                <summary style="font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    <span>游戏支持哪些平台？</span>
+                    <span>+</span>
+                </summary>
+                <p style="margin-top: 1rem; color: var(--text-sub); font-size: 0.95rem;">游戏支持iOS、Android以及PC端（通过模拟器或官方客户端）。</p>
+            </details>
+            <details style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                <summary style="font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    <span>资源不足如何发展？</span>
+                    <span>+</span>
+                </summary>
+                <p style="margin-top: 1rem; color: var(--text-sub); font-size: 0.95rem;">前期应专注于提升主角等级和装备，不要盲目抽卡。每日任务和活动是获取资源的主要途径。</p>
+            </details>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于弹射世界</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6;">这里致力于为玩家提供最详尽的游戏资料与攻略，帮助每一位召唤师在弹射世界中取得胜利。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">游戏官网</a></li>
+                    <li><a href="#">官方社区</a></li>
+                    <li><a href="#">公告板</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关资源</h4>
+                <ul>
+                    <li><a href="#">角色下载</a></li>
+                    <li><a href="#">壁纸图集</a></li>
+                    <li><a href="#">同人创作</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 弹射世界玩家社区. 本站为玩家非官方攻略站，游戏版权归原厂商所有。</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
