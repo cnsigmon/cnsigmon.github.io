@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="螳螂刀 - 专业刀具资讯与选购指南，涵盖战术螳螂刀、蝴蝶刀、弹簧刀等冷兵器文化、材质工艺、使用规范及安全注意事项。">
+    <meta name="keywords" content="螳螂刀, 蝴蝶刀, 战术刀具, 弹簧刀, 刀具资讯, 刀具保养, 刀具文化">
+    <title>螳螂刀-战术刀具资讯与选购指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #c0392b;
+            --text-color: #333333;
+            --light-text: #666666;
+            --bg-color: #f9f9f9;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+
+        nav a.active {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/knifehero/1600/600.jpg') center/cover no-repeat;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #a93226;
+        }
+
+        /* Main Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* Content Section */
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 12px;
+            color: var(--primary-color);
+        }
+
+        .article-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .article-meta {
+            font-size: 13px;
+            color: var(--light-text);
+            margin-bottom: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .article-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .article-excerpt {
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .article-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .widget-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .category-list li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            color: var(--text-color);
+        }
+
+        .category-list a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .count {
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 60px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .guide-item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .guide-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: var(--accent-color);
+        }
+
+        .guide-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .guide-item h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .guide-item p {
+            color: var(--light-text);
+            font-size: 14px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: var(--white);
+        }
+
+        .faq-question:hover {
+            background-color: #f8f8f8;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--light-text);
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                order: 3;
+                background: #fff;
+                padding-top: 10px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 10px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">螳螂<span>刀</span></a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">刀具分类</a></li>
+                    <li><a href="#">选购指南</a></li>
+                    <li><a href="#">保养维护</a></li>
+                    <li><a href="#">刀具文化</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探索锋芒之美：专业刀具资讯与选购指南</h1>
+            <p>从战术螳螂刀到传统蝴蝶刀，为您提供详尽的材质分析、使用规范及安全知识。欢迎来到您的专业刀具资源站。</p>
+            <a href="#guide" class="btn">开始选购</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="main-grid">
+            <main>
+                <section>
+                    <h2 class="section-title">最新资讯与评测</h2>
+                    
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/knife1/800/400.jpg" alt="战术螳螂刀评测" class="article-img">
+                        <div class="article-meta">
+                            <span>2023-10-24</span>
+                            <span>分类：刀具评测</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">2023年热门战术螳螂刀深度横评：锋利度与耐用性分析</a></h3>
+                        <p class="article-excerpt">随着户外探险和战术需求的增加，螳螂刀因其独特的开合结构和便携性备受关注。本文选取了市面上五款主流产品，从钢材硬度、刀柄握持感以及日常维护难度三个维度进行了详细对比...</p>
+                        <a href="#" style="color: var(--accent-color); font-weight: 500;">阅读全文 &rarr;</a>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/knife2/800/400.jpg" alt="蝴蝶刀技巧" class="article-img">
+                        <div class="article-meta">
+                            <span>2023-10-20</span>
+                            <span>分类：技巧教学</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">蝴蝶刀基础操控技巧：从“甩刀”到流畅的切刀</a></h3>
+                        <p class="article-excerpt">蝴蝶刀（Balisong）不仅是冷兵器，更是肢体协调性的训练工具。初学者往往容易在“刀刃朝外”的翻转中遇到困难。本文将为您拆解核心发力点，并提供安全练习建议...</p>
+                        <a href="#" style="color: var(--accent-color); font-weight: 500;">阅读全文 &rarr;</a>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/knife3/800/400.jpg" alt="刀具材质" class="article-img">
+                        <div class="article-meta">
+                            <span>2023-10-15</span>
+                            <span>分类：科普知识</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">钢材冷知识：如何辨别好的刀具钢材？</a></h3>
+                        <p class="article-excerpt">一把刀的好坏，核心在于钢材。CPM-20CV、D2、420HC...这些数字和字母组合意味着什么？本文将通俗解释钢材硬度、耐磨性和韧性的平衡关系，助您避坑...</p>
+                        <a href="#" style="color: var(--accent-color); font-weight: 500;">阅读全文 &rarr;</a>
+                    </article>
+                </section>
+            </main>
+
+            <aside>
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门分类</h3>
+                    <ul class="category-list">
+                        <li><a href="#"><span>战术螳螂刀</span> <span class="count">128</span></a></li>
+                        <li><a href="#"><span>蝴蝶刀</span> <span class="count">85</span></a></li>
+                        <li><a href="#"><span>开山刀</span> <span class="count">42</span></a></li>
+                        <li><a href="#"><span>求生工具刀</span> <span class="count">36</span></a></li>
+                        <li><a href="#"><span>收藏级古董刀</span> <span class="count">19</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">安全提示</h3>
+                    <div style="font-size: 14px; color: #666; line-height: 1.8;">
+                        <p>⚠️ <strong>注意：</strong> 在大多数国家和地区，持有某些类型的开刃刀具（特别是弹簧刀和部分蝴蝶刀）可能违反法律。</p>
+                        <br>
+                        <p>✅ <strong>建议：</strong> 请确保您了解当地法律法规，仅在合法场合使用，并佩戴防护装备进行练习。</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <section id="guide" class="guide-section">
+            <h2 class="section-title">选购与使用指南</h2>
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <div class="guide-icon">🛡️</div>
+                    <h3>安全第一</h3>
+                    <p>无论何种刀具，安全操作永远是首要原则。切勿在非专业场合随意展示或挥舞锋利刀具。</p>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">🧼</div>
+                    <h3>日常保养</h3>
+                    <p>使用后请立即用干布擦拭并涂抹防锈油。定期检查螺丝松动情况，保持刀刃锋利。</p>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">⚖️</div>
+                    <h3>法律合规</h3>
+                    <p>购买前请务必确认目标刀具在当地是否属于管制刀具，以免带来不必要的法律风险。</p>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">🔧</div>
+                    <h3>材质选择</h3>
+                    <p>户外作业建议选择高碳不锈钢；收藏或展示可考虑高硬度工具钢，但需注意其易脆性。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2 class="section-title">常见问题解答 (FAQ)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">螳螂刀和蝴蝶刀有什么区别？</div>
+                <div class="faq-answer">
+                    螳螂刀通常指单刃结构，刀刃固定或通过特定机关控制，强调实用性和战术功能；蝴蝶刀（Balisong）则是双刃结构，通过旋转刀柄进行开合，具有极高的观赏性和技巧性。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">新手应该从哪种刀具开始练习？</div>
+                <div class="faq-answer">
+                    对于技巧类刀具，建议从固定刀刃的折刀或直刀开始，熟悉握持和切割动作后再尝试高难度的蝴蝶刀或弹簧刀。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">如何判断一把刀是否为管制刀具？</div>
+                <div class="faq-answer">
+                    一般而言，具有自开功能（弹簧刀）、刀刃超过一定长度或带有特殊装饰的刀具容易受到管制。具体标准请参考当地公安机关发布的刀具管制条例。
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于螳螂刀</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">我们致力于为刀具爱好者提供最专业、最客观的资讯服务。涵盖刀具评测、技巧教学、法律科普及保养知识。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">刀具分类</a></li>
+                        <li><a href="#">最新评测</a></li>
+                        <li><a href="#">技巧教程</a></li>
+                        <li><a href="#">购买指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>法律声明</h4>
+                    <ul>
+                        <li><a href="#">使用条款</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">免责声明</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 螳螂刀资讯网 版权所有 | 本站内容仅供交流学习，请勿用于非法用途。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+          </html>
